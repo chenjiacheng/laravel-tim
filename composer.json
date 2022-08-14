@@ -19,7 +19,7 @@
         "chenjiacheng/tim": "^1.0"
     },
     "require-dev": {
-        "laravel/framework": "^8.0 || ^9.0"
+        "laravel/framework": "^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -32,7 +32,7 @@
                 "Chenjiacheng\\LaravelTim\\TimServiceProvider"
             ],
             "aliases": {
-                "Pay": "Chenjiacheng\\LaravelTim\\Facades\\Tim"
+                "Tim": "Chenjiacheng\\LaravelTim\\Facades\\Tim"
             }
         }
     }
