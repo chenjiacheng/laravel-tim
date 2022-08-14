@@ -19,6 +19,8 @@ class TimServiceProvider extends ServiceProvider
         $this->app->singleton(Tim::class, function ($app) {
             return new Tim($app['config']['tim']);
         });
+
+        $this->app->alias(Tim::class, 'tim');
     }
 
     /**
@@ -30,6 +32,10 @@ class TimServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__ . '/../config/tim.php');
 
-        $this->publishes([$source => config_path('tim.php')], 'config');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([$source => config_path('tim.php')], 'laravel-tim');
+        }
+
+        $this->mergeConfigFrom($source, 'tim');
     }
 }
