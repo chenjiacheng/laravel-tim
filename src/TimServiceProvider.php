@@ -28,8 +28,8 @@ class TimServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/config/tim.php' => config_path('tim.php')
-        ], 'config');
+        $source = realpath(__DIR__ . '/../config/tim.php');
+
+        $this->publishes([$source => config_path('tim.php')], 'config');
     }
 }
