@@ -25,5 +25,15 @@
         "psr-4": {
             "Chenjiacheng\\LaravelTim\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chenjiacheng\\LaravelTim\\TimServiceProvider"
+            ],
+            "aliases": {
+                "Pay": "Chenjiacheng\\LaravelTim\\Facades\\Tim"
+            }
+        }
     }
 }
