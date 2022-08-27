@@ -12,7 +12,7 @@ use Chenjiacheng\Tim\Service\Operate;
 use Chenjiacheng\Tim\Service\Overall;
 use Chenjiacheng\Tim\Service\Profile;
 use Chenjiacheng\Tim\Service\Push;
-use Chenjiacheng\Tim\Service\Sms;
+use Chenjiacheng\Tim\Service\Sns;
 use Illuminate\Support\Facades\Facade;
 
 class Tim extends Facade
@@ -110,10 +110,10 @@ class Tim extends Facade
     /**
      * Return the facade accessor.
      *
-     * @return Sms
+     * @return Sns
      */
-    public static function sms(): Sms
+    public static function sns(): Sns
     {
-        return app('tim')->sms;
+        return app('tim')->sns;
     }
 }
